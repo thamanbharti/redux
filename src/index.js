@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import CreateNotes from './createNotes';
 import EditNotes from './EditNotes';
+import Login from './login';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const router=createBrowserRouter([
@@ -20,11 +21,14 @@ const router=createBrowserRouter([
   },
   {
     path:'/',
-    element:<App/>
+    element:<Login/>
   },
   {
      path:'/editNotes/:id',
      element:<EditNotes/>
+  },{
+      path:'/main',
+      element:<App/>
   }
 ])
 
